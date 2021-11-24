@@ -1,0 +1,69 @@
+//Конвертер шрифтов
+//http://www.font2web.com/
+
+// Начертания шрифтов
+// 100 – Thin || Hairline
+// 200 – Extra Light || Ultra Light
+// 300 – Light
+// 400 – Normal || Regular
+// 500 – Medium
+// 600 – Semi Bold || Demi Bold
+// 700 – Bold
+// 800 – Extra Bold || Ultra Bold
+// 900 – Black || Heavy
+
+//Форматы шрифтов
+//.woff2') format('woff2')
+//.woff') format('woff')
+//.ttf') format('truetype')
+//.eot') format('embedded-opentype')
+//.svg") format("svg")
+
+@mixin font-face-woff2($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin font-face-woff($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.woff") format("woff");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin font-face-ttf($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.ttf") format("truetype");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+
+@mixin font-face-eot($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.eot") format("embedded-opentype");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
+@mixin font-face-svg($font-family, $url, $weight, $style) {
+  @font-face {
+    font-family: "#{$font-family}";
+    src: url("../fonts/#{$url}.svg") format("svg");
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: $style;
+  }
+}
