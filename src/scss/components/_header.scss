@@ -1,4 +1,55 @@
-//
-body {
-  background-color: #ff0;
+.header {
+  background-color: #3b322d;
+  &__top {
+    @include flex-all-sb;
+    padding: 20px 0;
+  }
+}
+
+.logo {
+  a {
+    @include flex-all-sb;
+    width: 150px;
+    color: $textcolor;
+  }
+}
+
+.nav {
+  &__list {
+    @include flex-v-center;
+  }
+  &__link {
+    font-size: 15px;
+    line-height: 20px;
+    color: $textcolor;
+    margin-right: 45px;
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
+}
+
+.header-contacts {
+  @include flex-v-center;
+  &__link {
+    padding: 10px 60px 10px 0;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 40px 37px;
+    @include flex-column-start;
+    font-size: 14px;
+    line-height: 19px;
+    color: $textcolor;
+    .contacts-tel {
+      font-size: 18px;
+      line-height: 27px;
+    }
+    &.contacts-address {
+      background-image: url("../img/place.svg");
+    }
+    &.contacts-record {
+      padding: 0 60px 0;
+      background-image: url("../img/phone.svg");
+    }
+  }
 }
